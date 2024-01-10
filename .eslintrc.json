@@ -1,7 +1,9 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
+
     },
     "extends": [
         "eslint:recommended",
@@ -20,12 +22,15 @@
         "@typescript-eslint",
         "react",
         "react-hooks",
-        "prettier"
+        "prettier",
+        "jest"
     ],
     "rules": {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/react-in-jsx-scope": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "jest/no-identical-title": "off",
+        "jest/valid-expect": "off"
     }
 }
