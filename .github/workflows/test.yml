@@ -10,6 +10,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -23,6 +25,9 @@ jobs:
 
     - name: Check linting
       run: yarn lint  
-      
+
+    - name: Check commit message
+      uses: wagoid/commitlint-github-action@v5   
+
       env:
         CI: true
