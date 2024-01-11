@@ -9,9 +9,11 @@
     "lint": "next lint",
     "test": "jest",
     "danger": "danger",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
+    "coveralls": "^3.1.1",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"

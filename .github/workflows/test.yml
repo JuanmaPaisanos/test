@@ -37,7 +37,11 @@ jobs:
 
     - name: Check commit message
       uses: wagoid/commitlint-github-action@v5 
-    
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
       env:
         CI: true
