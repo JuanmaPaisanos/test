@@ -19,6 +19,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Danger js check  
+      run: npx danger ci  
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+
     - name: install dependencies  
       run: yarn
 
@@ -30,6 +35,7 @@ jobs:
 
     - name: Check commit message
       uses: wagoid/commitlint-github-action@v5 
+    
 
       env:
         CI: true
