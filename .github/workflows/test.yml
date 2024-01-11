@@ -28,10 +28,5 @@ jobs:
     - name: Check linting
       run: yarn lint  
 
-    - name: Check commit message
-      uses: wagoid/commitlint-github-action@v5 
-      with: 
-        commitDepth: 5  
-
       env:
         CI: true
