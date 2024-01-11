@@ -25,7 +25,9 @@ jobs:
       run: yarn
 
     - name: Danger js check  
-      run: npx danger ci  
+      run: |
+        yarn danger init
+        yarn danger ci  
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
